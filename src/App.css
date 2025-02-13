@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: radial-gradient(circle 800px at 50% 95%, #197686, #052228, #041E23);
+    color: #fff;
+    border: 2px solid green;
+    overflow-x: hidden;
+}
+header{
+    border: 1px solid #197686;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 90px;
+    padding: 10px 40px;
+    border-radius: 20px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+nav ul li{
+    list-style: none;
+}
+ nav ul li a{
+    text-decoration: none;
+    color: #fff;
+ }
+ header div button{
+    padding: 15px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    color: #000;
+ }
+.body{
+    border: 1px solid #197686;
+    padding: 5px 30px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+.form{
+    margin: 20px 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #197686;
+    border-radius: 20px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 20px;
+    font-family: Roboto;
+}
+.header h2{
+    font-size: 32px;
+    font-weight: 200;
+
+}
+.progressbar{
+    width: 750px;
+    height: 5px;
+    background: #0E464F;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.progressbar div{
+    width: 33.3%;
+    height: 100%;
+    background: #24A0B5;
+    border-radius: 10px;
+
+}
+
+.ticket-header{
+    border: 1px solid #197686;
+    padding: 50px 150px;
+    margin-bottom: 0px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.3;
+    background-image: radial-gradient(circle 200px at 3% 15%, #197686, #07373f, #041E23);
+
+}
+.ticket-header h1{
+    font-family: Road Rage;
+    font-size: 64px;
+    line-height: 1.12;
+
+}
+.ticket-container hr{
+    width: 100%;
+   height: 3px;
+   background: #0E464F;
+    margin-top: 30px;
+    border: none;
+    border-radius: 50px;
+}
+.typebtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #197686;
+    margin: 0px 10px;
+    padding:40px 20px;
+    border-radius: 20px;
+    
+}
+.ticket-type h1{
+font-weight: 300;
+font-size: 18px;
+margin-top: 30px;
+margin-bottom: 30px;
+
+}
+.typebtn h2{
+    font-weight: 700;
+    font-size: 24px;
+}
+.typebtn p {
+    font-size: 16px;
+    line-height: 2.5;
+}
+.typebtn button:hover{
+    background: red;
+    cursor: pointer;
+}
+.typebtn button:nth-child(1).active{
+    background: #197686;
+}
+.typebtn button:nth-child(2).active{
+    background: #197686;
+}
+.typebtn button:nth-child(3).active{
+    background: #197686;
+}
+.typebtn button:hover:nth-child(1){
+    background: #197686;
+    cursor: pointer;
+}
+.typebtn button:hover:nth-child(2){
+    background: #197686;
+    cursor: pointer;
+}
+.typebtn button:hover:nth-child(3){
+    background: #197686;
+    cursor: pointer;
+}
+.typebtn button:nth-child(1){
+    background: #12464E;
+    width:  205px;
+    border: 1px solid #197686;
+    border-radius:20px;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    font-family: Roboto;
+}
+.typebtn button:nth-child(2){
+    background: #12464E;
+    color: #fff;
+    width:  200px;
+    border: 1px solid #197686;
+    border-radius:20px;
+    text-align: left;
+    padding-left: 15px;
+    font-family: Roboto;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.typebtn button:nth-child(3){
+    background: #12464E;
+    color: #fff;
+    width:  200px;
+    border: 1px solid #197686;
+    border-radius:20px;
+    text-align: left;
+    padding-left: 15px;
+    font-family: Roboto;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.ticket-no{
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+.ticket-no select{
+    width: 95%;
+    margin-top: 10px;
+    padding: 9px 20px;
+    border: 1px solid #197686;
+    background: #07373F;
+    color: #fff;
+    border-radius: 10px;
+}
+.button{
+    display: flex;
+    gap: 60px;
+    
+    margin: 30px 50px;
+
+}
+.button button{
+    padding: 10px 0px;
+    font-size: 16px;
+    width: 50%;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'JejuMyeongjo', sans-serif;
+    
+    
+}
+.nextbtn{
+    background: #24A0B5;
+    color: #fff;
+    border: none;
+}
+
+.prev{
+    border: 2px solid #24A0B5;
+    color: #24A0B5;
+    background: none;
+}
+
+.attendee-form{
+    display:flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    width: 48vw;
+    border: 1px solid #24A0B5;
+     border-radius: 10px;
+    padding: 20px 30px;
+    margin: 20px 0px;
+    font-family: Roboto;
+}
+.attendee-form  label{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.attendee-form input{
+    width: 45vw;
+    padding: 10px 8px;
+    border-radius: 10px;
+    border: 1px solid #197686;
+    background: #07373F;   
+     outline: none;
+    margin-top: 10px;
+    color: #fff;
+}
+.attendee-form hr{
+    width: 100%;
+    height: 4px;
+    border: none;
+    border-radius: 20px;
+    background: #07373F;
+    margin: 30px 0;
+}
+textarea{
+    width: 45vw;
+    resize: none;
+    height: 100px;
+    font-size: 16px;
+    padding: 5px 14px;
+    margin-bottom: 30px;
+    border: 1px solid #197686;
+    background: #07373F;
+    color: #fff;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 12px;
+}
+.upload-profile-box{
+    border: 1px solid #197686;
+    background: #07373F; 
+    padding: 20px 20px; 
+    border-radius: 12px;
+}
+
+.result-container {
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('./public/Subtract.png');
+    background-size: contain;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 800px;
+ width: 650px;
+}
+.result-header{
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    //position: relative;
+    //bottom: 80px;
+}
+.result-header h1{
+    font-family: Road Rage;
+    font-size: 34px;
+}
+.result-output{
+    border: 1px solid #197686;
+    padding: 5px 3px;
+    margin-top: -20%;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    border-radius: 12px;
+}
+.table-container{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    padding: 10px 10px;
+    font-family: Roboto;
+}
+.tablecontaiers{
+    background: #12464E;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+    border: 1px solid #12464E;
+}
+.table-content1, .table-content3{
+    border-right: 1px solid gray;
+    padding: 8px 10px;
+}
+.table-container span{
+font-size: 12px;
+}
+.table-container p{
+    font-size: 16px;
+    font-weight: 800;
+    }
+.table-content2, .table-content4{
+    padding-left: 10px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+
+}
+.table-content3, .table-content4{
+    padding-top: 10px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+}
+.table-content5{
+    text-align: left;
+    width: 40%;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.table-content5 p{
+    font-size: 16px;
+    font-weight: 800;
+}
+.table-content5 span{
+    font-size: 12px;
+}
+.result-data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px -5px;
+}
+
+
+
+.uploadedImg{
+    border: 1px solid #24A0B5;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.upload-container{
+    border: 1px solid #24A0B5;
+    border-radius: 12px;
+    padding: 10px 50px;
+    width: 37vw;
+    margin-top: 20px;
+    background: #0E464F;
+
+}
+.upload-container input{
+    height: 100px;
+    width: 20vw;
+    margin-left:120px;
+    border: 2px solid #24A0B5;
+    border-radius: 12px;
+}
+.error-msg{
+    text-align: center;
+    color: red;
+}
