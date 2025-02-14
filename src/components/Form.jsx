@@ -37,7 +37,9 @@ function Form() {
         return;
       }
     } else if (page === 1) {
-      if (!formData.name || !formData.email || !formData.request) {
+     if (
+        !formData.name || !formData.email || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email) ||  !formData.request
+      ) {
         setErrorMsg('Please fill out all required fields (Name, Email, and Request).');
         return;
       }

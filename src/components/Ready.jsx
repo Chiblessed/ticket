@@ -27,7 +27,7 @@ function Ready({ formData, setFormData, onDownload }) {
           <div className="result-data">
             <div className='uploadedImg'>
               <img 
-                src={formData.uploadedImg} 
+                src={formData.image} 
                 alt="Attendee" 
                 style={{ width: '200px', height: '200px', objectFit: 'cover' }} 
               />
@@ -61,7 +61,7 @@ function Ready({ formData, setFormData, onDownload }) {
           <div style={{ textAlign: 'center' }} className='barcode'>
             <Barcode 
               height={80}
-              width={1.5}
+              width={1}
               textAlign="center"
               fontSize={17}
               value={barcodeData} 
