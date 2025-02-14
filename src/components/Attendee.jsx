@@ -19,7 +19,6 @@ function Attendee({ formData, setFormData }) {
     console.log(getUploadedImage);
     console.log(imageUploaded);
 
-    // Store the uploaded image URL in the formData
     setFormData({ ...formData, image: imageUploaded });
   };
 
@@ -27,30 +26,38 @@ function Attendee({ formData, setFormData }) {
     <>
       <form className='attendee-form'>
         <div className="upload-profile-box">
-          <label htmlFor="profile-pictrue">Upload Profile Photo
+          <label htmlFor="profile-pictrue" className="upload-label">
+            Upload Profile Photo
             <div className='upload-container'>
+              {formData.image && (
+                <div className="upload-image" role="img" aria-label="Uploaded Profile Image">
+                  <img 
+                    src={formData.image} 
+                    alt="Uploaded profile image"
+                    style={{ width: '100px', height: '100px', objectFit: 'cover' }} 
+                    aria-live="polite" 
+                  />
+                </div>
+              )}
               <input 
                 type='file' 
+                id="profile-pictrue" 
                 onChange={handleUploadImage}
+                aria-label="Upload a profile picture"
+                accept="image/*"
+                aria-describedby="file-upload-instructions"
               />
             </div>
+            <span id="file-upload-instructions" className="sr-only">
+              Please select an image to upload as your profile picture.
+            </span>
           </label>
-          {formData.image && (
-          <div className="upload-container">
-            <img 
-              src={formData.image} 
-              alt="Uploaded Profile" 
-              style={{ width: '100px', height: '100px', objectFit: 'cover' }} 
-            />
-          </div>
-        )}
         </div>
-
-      
 
         <hr />
         
-        <label htmlFor="name-input">Enter your name
+        <label htmlFor="name-input">
+          Enter your name
           <input 
             id="name-input"
             value={formData.name}
@@ -62,7 +69,8 @@ function Attendee({ formData, setFormData }) {
           />
         </label>
 
-        <label htmlFor='email-address'>Enter your email
+        <label htmlFor='email-address'>
+          Enter your email
           <input 
             id='email-address'
             value={formData.email}
@@ -74,7 +82,8 @@ function Attendee({ formData, setFormData }) {
           />
         </label>
 
-        <label htmlFor='special-request'>Special Request
+        <label htmlFor='special-request'>
+          Special Request
           <textarea
             id='special-request'
             value={formData.request}
@@ -82,6 +91,7 @@ function Attendee({ formData, setFormData }) {
             placeholder='Got any request for us'
             aria-label="Special Request"
             aria-required="true"
+            rows="4"
           ></textarea>
         </label>
       </form>
