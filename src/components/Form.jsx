@@ -41,7 +41,7 @@ function Form() {
         setErrorMsg('Please fill out all required fields (Name, Email, and Request).');
         return;
       }
-      if (!formData.uploadedImg) {
+      if (!formData.image) {
         setErrorMsg('Please upload your profile image.');
         return;
       }
