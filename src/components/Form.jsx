@@ -41,10 +41,7 @@ function Form() {
         setErrorMsg('Please fill out all required fields (Name, Email, and Request).');
         return;
       }
-      if (!formData.image) {
-        setErrorMsg('Please upload your profile image.');
-        return;
-      }
+      
     } else if (page === 2) {
       downloadTicket();
     }
