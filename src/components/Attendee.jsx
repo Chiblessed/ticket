@@ -8,10 +8,10 @@ function Attendee({ formData, setFormData }) {
     const data = new FormData();
     data.append('file', file);
     data.append('upload_preset', 'ml_default');
-    data.append('cloud_name', 'dgfhl5okg');
+    data.append('cloud_name', import.meta.env.VITE_CLOUDINARY_KEY); 
 
-    const getImage = await fetch('https://api.cloudinary.com/v1_1/dgfhl5okg/image/upload', {
-      method: 'POST',
+    const getImage = await fetch(import.meta.env.VITE_CLOUDINARY_URL, { 
+       method: 'POST',
       body: data,
     });
     const getUploadedImage = await getImage.json();
